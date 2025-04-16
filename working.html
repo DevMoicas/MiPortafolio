@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página en Desarrollo</title>
+
+  <!-- Material Symbols (Google Icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: black;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .material-symbols-outlined {
+      font-size: 48px;
+      color: #FFA000; /* color de advertencia */
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="material-symbols-outlined">construction</span>
+    <h1>Esta página está en desarrollo</h1>
+    <p>Vuelve pronto para ver las novedades.</p>
+
+    <div class="backButton" >
+        <button id="download"  onclick="window.location.href='index.html'">
+          <span class="material-symbols-outlined">arrow_back_ios_new</span>
+          Regresar
+        </button>
+  </div>
+</body>
+</html>
