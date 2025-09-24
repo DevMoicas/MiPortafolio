@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Login con android studio</title>
+    <!-- Incluir Tailwind CSS CDN para un estilo moderno y minimalista -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usar la fuente Inter de Google Fonts para un aspecto más profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Incluir Font Awesome para el ícono de regresar y el resto de los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        xintegrity="sha512-Fo3rlrZj/k7ujTnHg4C+0j/8s/2QG02yG/l2b2Lh3zL9j5C5x5z1e/g+E5B1p+Q5w/t/C6i5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-gray-200">
+
+    <!-- Barra de navegación limpia y oscura con enlaces de anclaje -->
+    <header class="bg-slate-900 border-b border-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="index.html"
+                class="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">Portafolio</a>
+            <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+                <a href="index.html#acerca-de-mi" class="text-gray-300 hover:text-cyan-400 transition-colors">Acerca de
+                    mí</a>
+                <a href="index.html#proyectos" class="text-gray-300 hover:text-cyan-400 transition-colors">Proyectos</a>
+                <form class="flex space-x-2">
+                    <input type="search" placeholder="Buscar proyecto..." aria-label="Search"
+                        class="px-3 py-1 bg-gray-800 text-gray-200 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                    <button type="submit"
+                        class="px-4 py-1 text-sm font-semibold text-gray-900 bg-cyan-400 rounded-md hover:bg-cyan-300 transition-colors">
+                        Confirmar
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 text-center">
+
+        <!-- Contenido principal del proyecto -->
+        <div class="flex flex-col items-center">
+            <img src="Androidst.png" class="rounded-2xl shadow-lg border-2 border-cyan-400 max-w-sm w-full mx-auto"
+                alt="Logo del proyecto SocialMoi" loading="lazy"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x400/334155/E2E8F0?text=SocialMoi'">
+
+            <h1 class="text-5xl font-bold text-gray-100 my-8">Proyecto Login con android studio.</h1>
+            <div class="w-full h-px bg-gray-700"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">¿Qué es este proyecto?</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Este proyecto el cual se desarrolló usando Android Studio + react native, es un login sencillo el cual ayudó a conocer los fundamentos en la programación para celulares.
+                </p>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">Objetivo del proyecto</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    El objetivo principal fue conocer el desarrollo para celulares, conocer acerca de pruebas unitarias y uso de Android studio.
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-700 my-16"></div>
+
+        <!-- Sección de herramientas -->
+        <h2 class="text-3xl font-bold text-gray-100 mb-6">Herramientas utilizadas:</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-html5 text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">Android Studio</span>
+                <span class="text-sm text-gray-400">Entorno de desarrollo</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-js text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">React native</span>
+                <span class="text-sm text-gray-400">Toda la programación.</span>
+            </div>
+           
+        </div>
+
+        <div class="w-full h-px bg-gray-700 my-16"></div>
+
+        <!-- Sección de capturas de pantalla -->
+        <h2 class="text-3xl font-bold text-gray-100 mb-6">Captura de fragmento de código software:</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="rounded-xl shadow-lg overflow-hidden border border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                <img src="AS.png" alt="Captura 1" loading="lazy" class="w-full max-w-2xl h-auto"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/334155/E2E8F0?text=Captura+1'">
+            </div>
+        </div>
+
+        <!-- Botón de regreso -->
+        <div class="mt-16">
+            <a href="index.html"
+                class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
+                <i class="fas fa-arrow-left"></i>
+                <span>Regresar</span>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
