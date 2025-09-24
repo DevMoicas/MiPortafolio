@@ -40,6 +40,21 @@
         .scrolling-container:hover .animate-scroll {
             animation-play-state: paused;
         }
+
+        /* Animación para el mensaje de no resultados */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
     </style>
 </head>
 
@@ -48,7 +63,8 @@
     <!-- Barra de navegación limpia y oscura con enlaces de anclaje -->
     <header class="bg-slate-900 border-b border-gray-800 shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
-            <a href="#acerca-de-mi" class="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">Portafolio</a>
+            <a href="#acerca-de-mi"
+                class="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">Portafolio</a>
             <div class="flex items-center space-x-4 mt-4 sm:mt-0">
                 <a href="#acerca-de-mi" class="text-gray-300 hover:text-cyan-400 transition-colors">Acerca de mí</a>
                 <a href="#proyectos" class="text-gray-300 hover:text-cyan-400 transition-colors">Proyectos</a>
@@ -67,154 +83,157 @@
 
     <main class="container mx-auto px-4 py-12">
 
-        <!-- Sección Acerca de mí -->
-        <section id="acerca-de-mi" class="flex flex-col items-center text-center">
-            <!-- Título con efecto de degradado -->
-            <h1 class="text-5xl font-extrabold mb-4"
-                style="background-image: linear-gradient(45deg, #1e90ff, #00d2ff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                ¡Hola Mundo!
-            </h1>
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-8">Acerca de mí</h1>
-            <!-- Contenido principal: Foto y descripción -->
-            <img src="ProfilePictureMG.webp" alt="Foto de perfil de Moisés"
-                class="w-48 h-48 rounded-full object-cover shadow-2xl mb-6 border-4 border-cyan-400" loading="eager"
-                onerror="this.onerror=null;this.src='https://placehold.co/192x192/334155/E2E8F0?text=Moisés'">
+        <!-- Contenedor para las secciones de la página principal -->
+        <div id="main-content-sections" class="transition-all duration-300">
+            <!-- Sección Acerca de mí -->
+            <section id="acerca-de-mi" class="flex flex-col items-center text-center">
+                <!-- Título con efecto de degradado -->
+                <h1 class="text-5xl font-extrabold mb-4"
+                    style="background-image: linear-gradient(45deg, #1e90ff, #00d2ff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    ¡Hola Mundo!
+                </h1>
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-8">Acerca de mí</h1>
+                <!-- Contenido principal: Foto y descripción -->
+                <img src="ProfilePictureMG.webp" alt="Foto de perfil de Moisés"
+                    class="w-48 h-48 rounded-full object-cover shadow-2xl mb-6 border-4 border-cyan-400" loading="eager"
+                    onerror="this.onerror=null;this.src='https://placehold.co/192x192/334155/E2E8F0?text=Moisés'">
 
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-2">Moisés Alejandro Grimaldo Garcia</h1>
-            <h2 class="text-lg text-cyan-400 mb-4 font-semibold">¡La tecnología es el futuro y el futuro es hoy! 👨‍💻</h2>
-            <p class="max-w-3xl text-gray-300 leading-relaxed">
-                ¡Hola mundo! Mi nombre es Moisés, actualmente tengo 20 años de edad y soy estudiante de la carrera ingenieria de software en la Universidad de Colima, actualmente estoy desarrollando paulatinamente pequeños proyectos los cuales me ayuden a complementar mi CV y que me ayuden a fortalecer mis habilidades en el área. Cuento con varias habilidades blandas como saber trabajar en equipo, tener facilidad de palabra y me gusta mucho aprender cosas nuevas dia con dia.
-            </p>
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-2">Moisés Alejandro Grimaldo Garcia</h1>
+                <h2 class="text-lg text-cyan-400 mb-4 font-semibold">¡La tecnología es el futuro y el futuro es hoy! 👨‍💻</h2>
+                <p class="max-w-3xl text-gray-300 leading-relaxed">
+                    ¡Hola mundo! Mi nombre es Moisés, actualmente tengo 20 años de edad y soy estudiante de la carrera ingenieria de software en la Universidad de Colima, actualmente estoy desarrollando paulatinamente pequeños proyectos los cuales me ayuden a complementar mi CV y que me ayuden a fortalecer mis habilidades en el área. Cuento con varias habilidades blandas como saber trabajar en equipo, tener facilidad de palabra y me gusta mucho aprender cosas nuevas dia con dia.
+                </p>
 
-            <div class="w-full h-px bg-gray-700 my-10"></div>
+                <div class="w-full h-px bg-gray-700 my-10"></div>
 
-            <!-- Sección de habilidades en formato de carrusel -->
-            <h1 class="text-2xl font-bold text-gray-100 mb-6">Mis habilidades:</h1>
-            <div class="scrolling-container w-full overflow-hidden relative">
-                <div class="animate-scroll flex flex-nowrap space-x-6 items-center w-max py-4">
-                    <!-- Clona los elementos para un desplazamiento infinito -->
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-js text-cyan-400 mr-2"></i>JavaScript</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-cuttlefish text-cyan-400 mr-2"></i>C++</span>
-                        <span class="text-sm font-semibold text-gray-300">Bajo</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-python text-cyan-400 mr-2"></i>Python</span>
-                        <span class="text-sm font-semibold text-gray-300">Bajo</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>TypeScript</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-css3-alt text-cyan-400 mr-2"></i>CSS</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fas fa-database text-cyan-400 mr-2"></i>SQL</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-php text-cyan-400 mr-2"></i>PHP</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fas fa-globe-americas text-cyan-400 mr-2"></i>Inglés</span>
-                        <span class="text-sm font-semibold text-gray-300">B1 intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-github text-cyan-400 mr-2"></i>GitHub</span>
-                        <span class="text-sm font-semibold text-gray-300">Avanzado</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
-                        <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <!-- Repetir los elementos para un efecto de desplazamiento infinito -->
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-js text-cyan-400 mr-2"></i>JavaScript</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-cuttlefish text-cyan-400 mr-2"></i>C++</span>
-                        <span class="text-sm font-semibold text-gray-300">Bajo</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-python text-cyan-400 mr-2"></i>Python</span>
-                        <span class="text-sm font-semibold text-gray-300">Bajo</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>TypeScript</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-css3-alt text-cyan-400 mr-2"></i>CSS</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fas fa-database text-cyan-400 mr-2"></i>SQL</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-php text-cyan-400 mr-2"></i>PHP</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fas fa-globe-americas text-cyan-400 mr-2"></i>Inglés</span>
-                        <span class="text-sm font-semibold text-gray-300">B1 intermedio</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-github text-cyan-400 mr-2"></i>GitHub</span>
-                        <span class="text-sm font-semibold text-gray-300">Avanzado</span>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
-                        <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
-                        <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                <!-- Sección de habilidades en formato de carrusel -->
+                <h1 class="text-2xl font-bold text-gray-100 mb-6">Mis habilidades:</h1>
+                <div class="scrolling-container w-full overflow-hidden relative">
+                    <div class="animate-scroll flex flex-nowrap space-x-6 items-center w-max py-4">
+                        <!-- Clona los elementos para un desplazamiento infinito -->
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-js text-cyan-400 mr-2"></i>JavaScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-cuttlefish text-cyan-400 mr-2"></i>C++</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-python text-cyan-400 mr-2"></i>Python</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>TypeScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-css3-alt text-cyan-400 mr-2"></i>CSS</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fas fa-database text-cyan-400 mr-2"></i>SQL</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-php text-cyan-400 mr-2"></i>PHP</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fas fa-globe-americas text-cyan-400 mr-2"></i>Inglés</span>
+                            <span class="text-sm font-semibold text-gray-300">B1 intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-github text-cyan-400 mr-2"></i>GitHub</span>
+                            <span class="text-sm font-semibold text-gray-300">Avanzado</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px] border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <!-- Repetir los elementos para un efecto de desplazamiento infinito -->
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-js text-cyan-400 mr-2"></i>JavaScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-cuttlefish text-cyan-400 mr-2"></i>C++</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-python text-cyan-400 mr-2"></i>Python</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>TypeScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-css3-alt text-cyan-400 mr-2"></i>CSS</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fas fa-database text-cyan-400 mr-2"></i>SQL</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-php text-cyan-400 mr-2"></i>PHP</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fas fa-globe-americas text-cyan-400 mr-2"></i>Inglés</span>
+                            <span class="text-sm font-semibold text-gray-300">B1 intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-github text-cyan-400 mr-2"></i>GitHub</span>
+                            <span class="text-sm font-semibold text-gray-300">Avanzado</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-full h-px bg-gray-700 my-10"></div>
+                <div class="w-full h-px bg-gray-700 my-10"></div>
 
-            <!-- Botón de descarga de CV, estilizado de forma consistente -->
-            <h1 class="text-2xl font-bold text-gray-100 mb-6">
-                ¿Quieres conocer mi perfil profesional?
-                <br>
-                Descarga mi CV a continuación:
-            </h1>
-            <a href="CVMGENGLISH.pdf" download
-                class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
-                <i class="fas fa-download"></i>
-                <span>Descargar CV aquí</span>
-            </a>
+                <!-- Botón de descarga de CV, estilizado de forma consistente -->
+                <h1 class="text-2xl font-bold text-gray-100 mb-6">
+                    ¿Quieres conocer mi perfil profesional?
+                    <br>
+                    Descarga mi CV a continuación:
+                </h1>
+                <a href="CVMoisesGrimaldo.pdf" download
+                    class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
+                    <i class="fas fa-download"></i>
+                    <span>Descargar CV aquí</span>
+                </a>
 
-        </section>
+            </section>
 
-        <!-- Separador visual -->
-        <div class="w-full h-px bg-gray-700 my-16"></div>
+            <!-- Separador visual -->
+            <div class="w-full h-px bg-gray-700 my-16"></div>
+        </div>
 
         <!-- Sección de Proyectos -->
         <section id="proyectos">
@@ -288,26 +307,61 @@
                         </a>
                     </div>
                 </div>
+            </div>
 
+            <!-- Mensaje de no resultados (inicialmente oculto) -->
+            <div id="no-results-message" class="text-center mt-12 hidden fade-in">
+                <div class="text-6xl mb-4 animate-bounce">
+                    <span role="img" aria-label="Robot triste">🤖😢</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-100">¡No se encontraron resultados!</h2>
+                <p class="text-gray-400 mt-2">Prueba con otro término de búsqueda.</p>
             </div>
         </section>
 
     </main>
 
     <script>
+        document.getElementById('search-input').addEventListener('input', function (e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const projectCards = document.querySelectorAll('.project-card');
+            const mainContent = document.getElementById('main-content-sections');
+            const noResultsMessage = document.getElementById('no-results-message');
+            let found = false;
+
+            if (searchTerm.length > 0) {
+                // Oculta las secciones principales y muestra la de proyectos
+                mainContent.style.display = 'none';
+                document.getElementById('proyectos').style.display = 'block';
+
+                projectCards.forEach(card => {
+                    const title = card.getAttribute('data-title').toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        found = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (found) {
+                    noResultsMessage.classList.add('hidden');
+                } else {
+                    noResultsMessage.classList.remove('hidden');
+                }
+            } else {
+                // Si la barra de búsqueda está vacía, muestra todo
+                mainContent.style.display = 'block';
+                noResultsMessage.classList.add('hidden');
+                projectCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            }
+        });
+
+        // Previene el envío del formulario al presionar Enter
         document.getElementById('search-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            const searchTerm = document.getElementById('search-input').value.toLowerCase();
-            const projectCards = document.querySelectorAll('.project-card');
-
-            projectCards.forEach(card => {
-                const title = card.getAttribute('data-title').toLowerCase();
-                if (title.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
         });
     </script>
 </body>
