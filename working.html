@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página en Desarrollo</title>
-
-  <!-- Material Symbols (Google Icons) -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      background-color: black;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      text-align: center;
-      padding: 40px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .material-symbols-outlined {
-      font-size: 48px;
-      color: #FFA000; /* color de advertencia */
-      margin-bottom: 10px;
-    }
-    h1 {
-      font-size: 2em;
-      color: #333;
-    }
-    p {
-      color: #666;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página en Desarrollo</title>
+    <!-- Incluir Tailwind CSS CDN para un estilo moderno y minimalista -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usar la fuente Inter de Google Fonts para un aspecto más profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Incluir Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        xintegrity="sha512-Fo3rlrZj/k7ujTnHg4C+0j/8s/2QG02yG/l2b2Lh3zL9j5C5x5z1e/g+E5B1p+Q5w/t/C6i5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <span class="material-symbols-outlined">construction</span>
-    <h1>Esta página está en desarrollo</h1>
-    <p>Vuelve pronto para ver las novedades.</p>
 
-    <div class="backButton" >
-        <button id="download"  onclick="window.location.href='index.html'">
-          <span class="material-symbols-outlined">arrow_back_ios_new</span>
-          Regresar
-        </button>
-  </div>
+<body class="bg-slate-950 text-gray-200 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor principal de la página -->
+    <div
+        class="container text-center bg-gray-800 p-10 sm:p-12 rounded-2xl shadow-lg border-2 border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+        <i class="fas fa-tools text-cyan-400 text-5xl mb-4 animate-pulse"></i>
+        <h1 class="text-4xl font-bold text-gray-100 mb-2">Esta página está en desarrollo</h1>
+        <p class="text-gray-300 mb-6 max-w-lg mx-auto">
+            Estamos trabajando en algo increíble. Vuelve pronto para ver las novedades.
+        </p>
+
+        <!-- Botón de regreso, estilizado para coincidir con el resto del portafolio -->
+        <a href="index.html"
+            class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
+            <i class="fas fa-arrow-left"></i>
+            <span>Regresar</span>
+        </a>
+    </div>
+
 </body>
+
 </html>
