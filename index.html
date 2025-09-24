@@ -95,7 +95,7 @@
                 <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-8">Acerca de mí</h1>
                 <!-- Contenido principal: Foto y descripción -->
                 <img src="ProfilePictureMG.webp" alt="Foto de perfil de Moisés"
-                    class="w-48 h-48 rounded-full object-cover shadow-2xl mb-6 border-4 border-cyan-400" loading="eager"
+                    class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-2xl mb-6 border-4 border-cyan-400" loading="eager"
                     onerror="this.onerror=null;this.src='https://placehold.co/192x192/334155/E2E8F0?text=Moisés'">
 
                 <h1 class="text-4xl sm:text-5xl font-bold text-gray-100 mb-2">Moisés Alejandro Grimaldo Garcia</h1>
@@ -106,9 +106,9 @@
 
                 <div class="w-full h-px bg-gray-700 my-10"></div>
 
-                <!-- Sección de habilidades en formato de carrusel -->
-                <h1 class="text-2xl font-bold text-gray-100 mb-6">Mis habilidades:</h1>
-                <div class="scrolling-container w-full overflow-hidden relative">
+                <!-- Sección de habilidades en formato de carrusel (Solo en pantallas grandes) -->
+                <h1 class="text-2xl font-bold text-gray-100 mb-6 hidden sm:block">Mis habilidades:</h1>
+                <div class="scrolling-container w-full overflow-hidden relative hidden sm:block">
                     <div class="animate-scroll flex flex-nowrap space-x-6 items-center w-max py-4">
                         <!-- Clona los elementos para un desplazamiento infinito -->
                         <div
@@ -209,6 +209,63 @@
                         </div>
                         <div
                             class="bg-gray-800 p-5 rounded-xl flex-shrink-0 flex items-center justify-between min-w-[200px]">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de habilidades en formato de lista vertical (Solo en móviles) -->
+                <div class="block sm:hidden">
+                    <h1 class="text-2xl font-bold text-gray-100 mb-6 text-center">Mis habilidades:</h1>
+                    <div class="flex flex-col space-y-4">
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-js text-cyan-400 mr-2"></i>JavaScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-cuttlefish text-cyan-400 mr-2"></i>C++</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-python text-cyan-400 mr-2"></i>Python</span>
+                            <span class="text-sm font-semibold text-gray-300">Bajo</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>TypeScript</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-css3-alt text-cyan-400 mr-2"></i>CSS</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fas fa-database text-cyan-400 mr-2"></i>SQL</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-php text-cyan-400 mr-2"></i>PHP</span>
+                            <span class="text-sm font-semibold text-gray-300">Intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fas fa-globe-americas text-cyan-400 mr-2"></i>Inglés</span>
+                            <span class="text-sm font-semibold text-gray-300">B1 intermedio</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                            <span class="text-lg font-medium"><i class="fab fa-github text-cyan-400 mr-2"></i>GitHub</span>
+                            <span class="text-sm font-semibold text-gray-300">Avanzado</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
                             <span class="text-lg font-medium"><i class="fab fa-node-js text-cyan-400 mr-2"></i>Node.js</span>
                             <span class="text-sm font-semibold text-gray-300">Intermedio</span>
                         </div>
@@ -331,8 +388,8 @@
 
             if (searchTerm.length > 0) {
                 // Oculta las secciones principales y muestra la de proyectos
-                mainContent.style.display = 'none';
-                document.getElementById('proyectos').style.display = 'block';
+                mainContent.classList.add('hidden');
+                document.getElementById('proyectos').classList.remove('hidden');
 
                 projectCards.forEach(card => {
                     const title = card.getAttribute('data-title').toLowerCase();
@@ -351,7 +408,7 @@
                 }
             } else {
                 // Si la barra de búsqueda está vacía, muestra todo
-                mainContent.style.display = 'block';
+                mainContent.classList.remove('hidden');
                 noResultsMessage.classList.add('hidden');
                 projectCards.forEach(card => {
                     card.style.display = 'block';
