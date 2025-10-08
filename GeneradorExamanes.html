@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Generador de examenes con IAG</title>
+    <!-- Incluir Tailwind CSS CDN para un estilo moderno y minimalista -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usar la fuente Inter de Google Fonts para un aspecto más profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Incluir Font Awesome para el ícono de regresar y el resto de los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        xintegrity="sha512-Fo3rlrZj/k7ujTnHg4C+0j/8s/2QG02yG/l2b2Lh3zL9j5C5x5z1e/g+E5B1p+Q5w/t/C6i5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-gray-200">
+
+    <!-- Barra de navegación limpia y oscura con enlaces de anclaje -->
+    <header class="bg-slate-900 border-b border-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="index.html"
+                class="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">Portafolio</a>
+            <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+                <a href="index.html#acerca-de-mi" class="text-gray-300 hover:text-cyan-400 transition-colors">Acerca de
+                    mí</a>
+                <a href="index.html#proyectos" class="text-gray-300 hover:text-cyan-400 transition-colors">Proyectos</a>
+                <form class="flex space-x-2">
+                    <input type="search" placeholder="Buscar proyecto..." aria-label="Search"
+                        class="px-3 py-1 bg-gray-800 text-gray-200 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                    <button type="submit"
+                        class="px-4 py-1 text-sm font-semibold text-gray-900 bg-cyan-400 rounded-md hover:bg-cyan-300 transition-colors">
+                        Confirmar
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 text-center">
+
+        <!-- Contenido principal del proyecto -->
+        <div class="flex flex-col items-center">
+            <img src="GeneradorExamanes.webp" class="rounded-2xl shadow-lg border-2 border-cyan-400 max-w-sm w-full mx-auto"
+                alt="Logo del proyecto SocialMoi" loading="lazy"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x400/334155/E2E8F0?text=SocialMoi'">
+
+            <h1 class="text-5xl font-bold text-gray-100 my-8">Proyecto Generador de examanes con IAG</h1>
+            <div class="w-full h-px bg-gray-700"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">¿Qué es este generador de examenes?</h2>
+                <p class="text-gray-300 leading-relaxed">
+                   Este generador de examanes con IAG, es un proyecto el cual actualmente se encuentra en desarrollo, la idea principal de este proyecto es hacer un software dirigido a docentes de la Universidad de Colima con el cual ellos podrán generar dichos metódos de evaluación de una manera agil, cuando se genera el test, el docente puede publicarlo e invitar a los alumnos a utilizarlo
+                </p>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">Objetivo del proyecto</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    El objetivo principal de este proyecto es aprender acerca de temas de inteligencia artificial, profundizar conocimientos en bases de datos y uso de APIS.
+                </p>
+            </div>
+               <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-transparent hover:border-cyan-400 transition-all duration-200 ease-in-out">
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">Detalles adicionales</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    De momento unicamente se tiene el producto minimo viable del software el cual es generar examenes, para probar el software en la parte inferior de la pagina encontrarás un botón que te va dirigir a dicha pagina, para probarla deberas seleccionar acceder como profesor e ingresar los siguientes datos: Correo: profesor@ucol.mx   Contraseña: profesor123
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-700 my-16"></div>
+
+        <!-- Sección de herramientas -->
+        <h2 class="text-3xl font-bold text-gray-100 mb-6">Herramientas utilizadas:</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-html5 text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">HTML</span>
+                <span class="text-sm text-gray-400">Esqueleto de la página</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-js text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">JavaScript</span>
+                <span class="text-sm text-gray-400">Lógica de la página</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fas fa-cubes text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">API de gemini</span>
+                <span class="text-sm text-gray-400">Para generar los examanes</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fas fa-brush text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">Tailwind</span>
+                <span class="text-sm text-gray-400">Framework de diseño</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fas fa-code text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">Cursor</span>
+                <span class="text-sm text-gray-400">IDE utilizado</span>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-xl flex flex-col items-center hover:bg-gray-700 transition-colors">
+                <i class="fas fa-code text-cyan-400 text-3xl mb-2"></i>
+                <span class="text-lg font-medium">SQLITE</span>
+                <span class="text-sm text-gray-400">Base de datos</span>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-700 my-16"></div>
+
+        <!-- Sección de capturas de pantalla -->
+        <h2 class="text-3xl font-bold text-gray-100 mb-6">Capturas del software:</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="rounded-xl shadow-lg overflow-hidden border border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                <img src="Generador1.webp" alt="Captura 1" loading="lazy" class="w-full max-w-2xl h-auto"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/334155/E2E8F0?text=Captura+1'">
+            </div>
+            <div class="rounded-xl shadow-lg overflow-hidden border border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                <img src="Generador2.webp" alt="Captura 2" loading="lazy" class="w-full max-w-2xl h-auto"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/334155/E2E8F0?text=Captura+2'">
+            </div>
+             <div class="rounded-xl shadow-lg overflow-hidden border border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                <img src="Generador3.webp" alt="Captura 3" loading="lazy" class="w-full max-w-2xl h-auto"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/334155/E2E8F0?text=Captura+2'">
+            </div>
+            <div class="rounded-xl shadow-lg overflow-hidden border border-transparent hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                <img src="Generador4.webp" alt="Captura 4" loading="lazy" class="w-full max-w-2xl h-auto"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/334155/E2E8F0?text=Captura+2'">
+            </div>
+        </div>
+
+        <!-- Botón de regreso -->
+        <div class="mt-16">
+            <a href="index.html"
+                class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
+                <i class="fas fa-arrow-left"></i>
+                <span>Regresar</span>
+            </a>
+        </div>
+
+        <!---Boton para probar el software-->
+          <div class="mt-16">
+            <a href="https://devmoicas.github.io/GeneradorDeExamanes/"
+                class="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-400 text-gray-900 rounded-md font-semibold text-lg hover:bg-cyan-300 transition-colors shadow-lg">
+                <i class="fas fa-clip"></i>
+                <span>Probar el software</span>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
